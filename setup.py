@@ -35,7 +35,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'django-cms >= 3.0',
+        'django-cms >= 3.1',
         'django-appconf >= 1.0.1',
         'jsonfield >= 1.0.3',
     ],

@@ -8,8 +8,8 @@ Owl Carousel is supported.
 Dependencies
 ------------
 
--  Djangocms>=3.0
--  Django>=1.6
+-  Djangocms>=3.1
+-  Django>=1.7
 
 Installation
 ------------
@@ -29,17 +29,6 @@ Add Djangocms\_owl to INSTALLED\_APPS
         'djangocms_owl',
         ...
     )
-
-Django 1.6 and/or South users will need to add the following to ensure
-migration compatibility.
-
-.. code:: python
-
-    SOUTH_MIGRATION_MODULES = {
-        ...
-        'djangocms_owl': 'djangocms_owl.south_migrations',
-        ...
-    }
 
 **Owl Carousel** has a dependency on JQuery `Docs`_ that is not
 currently included within this package. Add a copy will need adding to a
@@ -142,6 +131,11 @@ Contributions
 
 History
 -------
+
+**0.1.8**
+
+- Removed South migrations
+- Django >= 1.7 required
 
 **0.1.7** (2015-08-06)
 
