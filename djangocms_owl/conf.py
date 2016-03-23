@@ -27,5 +27,12 @@ class OwlConf(AppConf):
 
     INCLUDE_JS_JQUERY = True
 
+    ENABLE_V2 = True
+
+    BASE_TEMPLATES = {
+        'v1': 'djangocms_owl/v1/base.html',
+        'v2': 'djangocms_owl/v2/base.html',
+    }
+
     class Meta:
         prefix = 'djangocms_owl'

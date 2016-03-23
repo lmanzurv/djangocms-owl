@@ -67,15 +67,26 @@ class OwlCarousel(AbstractOwlBase):
         return ''
 
     def get_owl_options(self):
-        options = {
-            'pagination': True if self.pagination else False,
-            'paginationNumbers': True if self.pagination_numbers else False,
-            'items': self.items,
-            'navigation': True if self.navigation else False,
-            'autoPlay': True if self.autoplay else False,
-            'stopOnHover': True if self.stop_on_hover else False,
-            'autoHeight': True if self.auto_height else False,
-        }
+        if settings.DJANGOCMS_OWL_ENABLE_V2:
+            options = {
+                'dots': True if self.pagination else False,
+                'dotsEach': True if self.pagination_numbers else False,
+                'items': self.items,
+                'nav': True if self.navigation else False,
+                'autoplay': True if self.autoplay else False,
+                'autoplayHoverPause': True if self.stop_on_hover else False,
+                'autoHeight': True if self.auto_height else False,
+            }
+        else:
+            options = {
+                'pagination': True if self.pagination else False,
+                'paginationNumbers': True if self.pagination_numbers else False,
+                'items': self.items,
+                'navigation': True if self.navigation else False,
+                'autoPlay': True if self.autoplay else False,
+                'stopOnHover': True if self.stop_on_hover else False,
+                'autoHeight': True if self.auto_height else False,
+            }
 
         if self.extra_options:
             options.update(self.extra_options)
