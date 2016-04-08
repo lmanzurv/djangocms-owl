@@ -78,15 +78,21 @@ class OwlCarousel(AbstractOwlBase):
                 'autoHeight': True if self.auto_height else False,
             }
         else:
-            options = {
-                'pagination': True if self.pagination else False,
-                'paginationNumbers': True if self.pagination_numbers else False,
-                'items': self.items,
-                'navigation': True if self.navigation else False,
-                'autoPlay': True if self.autoplay else False,
-                'stopOnHover': True if self.stop_on_hover else False,
-                'autoHeight': True if self.auto_height else False,
-            }
+                    options = {
+            'pagination': True if self.pagination else False,
+            'paginationNumbers': True if self.pagination_numbers else False,
+            'items': self.items,
+            'navigation': True if self.navigation else False,
+            'autoPlay': True if self.autoplay else False,
+            'stopOnHover': True if self.stop_on_hover else False,
+            'autoHeight': True if self.auto_height else False,
+            'singleItem': True if self.items == 1 else False,
+
+            # Defaults to be overriden in extra (for now)
+            'itemsDesktopSmall': False,
+            'itemsTablet': False,
+            'itemsMobile': False,
+        }
 
         if self.extra_options:
             options.update(self.extra_options)

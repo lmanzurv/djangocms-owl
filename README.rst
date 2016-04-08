@@ -132,10 +132,15 @@ Contributions
 History
 -------
 
-**0.1.8**
+**WIP**
 
 - Removed South migrations
 - Django >= 1.7 required
+
+**0.1.8** (2016-04-08)
+
+- Disabled responsive modes by default, to respect the items option. Options can be overridden in the extra field.
+- When 1 option is selected, singleItem is added to opions by default
 
 **0.1.7** (2015-08-06)
 
