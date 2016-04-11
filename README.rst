@@ -136,6 +136,7 @@ History
 
 - Removed South migrations
 - Django >= 1.7 required
+- Aldryn configuration files
 
 **0.1.8** (2016-04-08)
 
