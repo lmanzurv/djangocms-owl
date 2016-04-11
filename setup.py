@@ -27,8 +27,8 @@ setup(
     version=version,
     description="""Djangocms plugin for owl carousel v1""",
     long_description=readme,
-    author='Lee Solway',
-    author_email='lee@digitalanvil.co.uk',
+    author='Digital Anvil Ltd',
+    author_email='webmaster@digitalanvil.co.uk',
     url='https://github.com/digital-anvil/djangocms-owl',
     packages=[
         'djangocms_owl',

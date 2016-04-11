@@ -1,0 +1,6 @@
+{
+    "package-name": "djangocms_owl",
+    "installed-apps": [
+        "djangocms_owl"
+    ]
+}
